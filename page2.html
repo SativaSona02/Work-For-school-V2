@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้า 2 - รายการสมุนไพร</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .herb-card { 
+            border-left: 5px solid #27ae60; /* แถบสีเขียวด้านซ้าย */
+            border-radius: 0 10px 10px 0; 
+            transition: transform 0.3s;
+        }
+        .herb-card:hover {
+            transform: scale(1.03); /* ขยายใหญ่ขึ้นนิดนึงตอนชี้ */
+        }
+        
+        /* ปุ่มกดเปลี่ยนหน้าแบบใหม่ */
+        .nav-buttons { 
+            display: flex; 
+            justify-content: space-between; 
+            margin-top: 40px; 
+            padding: 0 20px;
+        }
+        .btn { 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            color: white; 
+            border-radius: 50px; 
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: 0.3s; 
+        }
+        .btn-back { background-color: #95a5a6; } /* สีเทา */
+        .btn-next { background-color: #27ae60; } /* สีเขียว */
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>สมุนไพรน่ารู้ (ชุดที่ 2)</h1>
+    </header>
+
+    <nav>
+        <a href="test.html">หน้าแรก</a>
+        <a href="page2.html" style="color: #27ae60;">รายการสมุนไพร</a> <a href="#footer">ผู้จัดทำ</a>
+    </nav>
+
+    <div class="content-wrapper">
+
+        <main>
+            <section>
+                <h2 style="text-align: center; color: #555;">รายชื่อสมุนไพรยอดนิยม (ต่อ)</h2>
+                <hr>
+                
+                <div class="herb-container">
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/2017/wanchalerm/Health_01_60/ma1.jpg" alt="มะขามป้อม">
+                        <h3>8. มะขามป้อม</h3>
+                        <p>สรรพคุณ: วิตามินซีสูง แก้ไอ เจ็บคอ ละลายเสมหะ</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/2016/patcharin/Herb/fahtalaijone.jpg" alt="ฟ้าทะลายโจร">
+                        <h3>9. ฟ้าทะลายโจร</h3>
+                        <p>สรรพคุณ: แก้ไข้หวัด ระงับอาการอักเสบ</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/kantana/health1_3.jpg" alt="ย่านาง">
+                        <h3>10. ย่านาง</h3>
+                        <p>สรรพคุณ: ถอนพิษไข้ ลดความร้อนในร่างกาย</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/2015/wanchalerm/Health_09_58/Marum_3.jpg" alt="มะรุม">
+                        <h3>11. มะรุม</h3>
+                        <p>สรรพคุณ: ลดความดันโลหิต ช่วยให้นอนหลับง่าย</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/2018/patcharin/Herb/choomhedted.jpg" alt="ชุมเห็ดเทศ">
+                        <h3>12. ชุมเห็ดเทศ</h3>
+                        <p>สรรพคุณ: เป็นยาระบาย แก้ท้องผูก รักษาโรคผิวหนัง</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="data:image/jpeg;base64,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" alt="บอระเพ็ด">
+                        <h3>13. บอระเพ็ด</h3>
+                        <p>สรรพคุณ: แก้ไข้ เจริญอาหาร เป็นยาอายุวัฒนะ</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/image/Food/saledpa%20w.jpg" alt="เสลดพังพอน">
+                        <h3>14. เสลดพังพอน</h3>
+                        <p>สรรพคุณ: ถอนพิษแมลงสัตว์กัดต่อย แก้ลมพิษ</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/2018/patcharin/Herb/mavang.jpg" alt="มะแว้ง">
+                        <h3>15. มะแว้ง</h3>
+                        <p>สรรพคุณ: แก้ไอ ขับเสมหะ ลดน้ำตาลในเลือด</p>
+                    </article>
+                    
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/image/variety/rangjued1.jpg" alt="รางจืด">
+                        <h3>16. รางจืด</h3>
+                        <p>สรรพคุณ: ราชาแห่งการถอนพิษ แก้เมาค้าง</p>
+                    </article>
+
+                    <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/2015/wanchalerm/Health_09_58/Krawan_4.jpg" alt="กระวาน">
+                        <h3>17. กระวาน</h3>
+                        <p>สรรพคุณ: ขับลม บำรุงธาตุ แก้ท้องอืด</p>
+                    </article>
+
+                     <article class="herb-card">
+                        <img src="https://img.thaicdn.net/u/2018/patcharin/Herb/ganplu.jpg" alt="กานพลู">
+                        <h3>18. กานพลู</h3>
+                        <p>สรรพคุณ: แก้ปวดฟัน ระงับกลิ่นปาก</p>
+                    </article>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="test.html" class="btn btn-back">⬅ กลับหน้าแรก</a>
+                    <a href="page3.html" class="btn btn-next">ไปหน้าถัดไป ➡</a>
+                </div>
+
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="ad-box">
+                <h3>สินค้าแนะนำ</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG/330px-Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG" alt="Leopard 2">
+                <p><strong>Leopard 2 A7V</strong></p>
+                <p style="color: red; font-weight: bold;">ราคาเป็นกันเอง!</p>
+            </div>
+            
+            <div class="ad-box">
+                <h3>เคล็ดลับสุขภาพ</h3>
+                <p>ดื่มน้ำสมุนไพรแต่น้อย<br>เพื่อสุขภาพที่ดี</p>
+            </div>
+        </aside>
+
+    </div> <footer id="footer">
+        <div class="profile-info">
+            <h2>ข้อมูลผู้จัดทำ</h2>
+            <p><strong>ชื่อ:</strong> Nawapat Ratchakul</p>
+            <p><strong>ระดับชั้น:</strong> ปวช. 2</p>
+            <img src="k:\work\code\page103\my-herbal-web\7787.jpg" alt="mick" width="300">
+        </div>
+        <p style="margin-top:10px; font-size: 12px;">&copy; 2024 Project Herbal.</p>
+    </footer>
+
+</body>
+</html>
